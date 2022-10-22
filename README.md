@@ -17,7 +17,6 @@
 <!-- [Resume Builder](https://github.com/R-Ayush777/WDW_Project_CE104_CE108_CE144) -->
 _**Created by :-**_ <br>[Ayush Rudani ( CE118 )](https://github.com/R-Ayush777)<br>[Jay Savani ( CE120 )](https://github.com/JaySavani)
 
-<br/>
 <hr> 
 
 ### Video Link : https://youtu.be/5c6oUQHgCtQ
