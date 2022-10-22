@@ -1,0 +1,129 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="DiscussIt.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title>let's DiscussIt</title>
+    <%--bootstrap css--%>
+    <%--bootstrap css--%>
+    <link href="Bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%--jquery and js--%>
+    <script src="Bootstrap/js/bootstrap.bundle.js"></script>
+
+    <link href="Bootstrap/css/bootstrap-grid.min.css" rel="stylesheet" />
+
+
+    <%--icon--%>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <style>
+        .footer {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#">Discussit</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <asp:LinkButton class="nav-link active" ID="LinkButton1" runat="server" CausesValidation="false" OnClick="Home_Click" Visible="true">Home</asp:LinkButton>
+                            </li>
+
+                            <%--<li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Posts
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="createpost.aspx">Create Post</a></li>
+                                    <li><a class="dropdown-item" href="mypost.aspx">My Post</a></li>
+
+                                </ul>
+                            </li>--%>
+
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="createpost.aspx">Ask Question</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-light" href="mypost.aspx">My Question</a>
+                            </li>
+
+                        </ul>
+                        <ul class="navbar-nav">
+
+
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="UserLogin" runat="server" CausesValidation="false" OnClick="UserLogin_Click" Visible="true">Login</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="UserSignup" runat="server" CausesValidation="false" OnClick="UserSignup_Click" Visible="true">Sign Up</asp:LinkButton>
+                            </li>
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="Logout" runat="server" CausesValidation="false" Visible="False" OnClick="Logout_Click">Logout</asp:LinkButton>
+                            </li>
+
+                            <li class="nav-item active">
+                                <asp:LinkButton class="nav-link" ID="UserProfile" runat="server" CausesValidation="false" OnClick="UserProfile_Click" Visible="False">Hello user</asp:LinkButton>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+
+        <!-- Main Content Placeholder -->
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <!-- Main Content Placeholder -->
+
+        <!-- Footer -->
+        <footer>
+            <!-- <div id="footer1" class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                        <p>
+                            <asp:LinkButton class="footerlinks" ID="LinkButton6" runat="server">Admin Login</asp:LinkButton>
+                        </p>
+                    </div
+                </div>
+            </div> -->
+            <%--            <footer class="footer">
+                <div id="footer2" class="">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 text-center">
+                            <p>&copy All right Reversed. <a class="footerlinks" href="homepage.aspx" target="_blank">Discussit</a></p>
+                        </div>
+                    </div>
+                </div>
+            </footer>--%>
+
+            <footer class="footer bg-light" style="height: 40px;">
+                <div class="col-xs-12 col-sm-12 col-md-12 text-center align-self-center" style="margin-top: 10px;">
+                    &copy All right Reversed. <a class="footerlinks" href="homepage.aspx" target="_blank">Discussit</a>
+                </div>
+            </footer>
+
+
+        </footer>
+        <!-- ./Footer -->
+
+    </form>
+</body>
+</html>
